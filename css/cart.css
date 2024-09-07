@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*--Cart Section Styling--*/
+.cart-container {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  border: none;
+  gap: 20px;
+  font-family: sans-serif;
+}
+.cart-left {
+  margin-top: 20px;
+  margin-left: 20px;
+  padding: 5px;
+
+  height: 100px;
+  display: flex;
+  flex: 0 0 60%;
+  justify-content: space-around;
+
+  border: 1px solid #af1313;
+  align-items: center;
+}
+.cart-left i {
+  border: none;
+  outline: none;
+  color: #af1313;
+  background: #fff;
+  font-size: 30px;
+  cursor: pointer;
+  border-radius: 100rem;
+}
+.cart-left img {
+  width: 70px;
+  height: 70px;
+  border-radius: 100rem;
+  border: none;
+  outline: none;
+}
+.plus-minus {
+  display: flex;
+  gap: 0.5cm;
+}
+
+.plus-minus button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  border: none;
+  background: #f1f1f1;
+  border-radius: 100rem;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.plus-minus button h6 {
+  color: purple;
+  font-size: 25px;
+}
+.cart-right {
+  flex: 0 0 36%;
+  border: 1px solid #af1313;
+  height: 130px;
+  margin-top: 20px;
+  display: grid;
+  padding: 5px;
+}
+
+.cartContent {
+  width: 100%;
+}
+
+/* Order button */
+.cart-right .savebtn {
+  width: 200px;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: none;
+  background-color: #af1313;
+  color: #fff;
+  outline: none;
+  opacity: 0.8;
+  cursor: pointer;
+}

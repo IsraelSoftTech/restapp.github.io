@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant App</title>
+    <link rel="stylesheet" href="../css/cart.css" />
+    <link rel="stylesheet" href="../css/home.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- Nav Bar -->
+    <header>
+      <div class="container">
+        <a href="../pages/home.html" class="logo">Restaurant App</a>
+        <nav>
+          <ul>
+            <li>
+              <a href="../pages/cart.html" class="active"
+                >Cart<span class="count" id="count">0</span></a
+              >
+            </li>
+            <li><a href="../pages/clientOrder.html">Orders</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!--Cart Content-->
+    <div class="cart-container">
+      <div class="cartContent" id="cartContent">
+
+        
+      </div>
+
+      <div class="cart-right">
+        <h4>Items Count:<span id="itemCount">0</span></h4>
+        <h4>Total Price: <span id="totalPrice">0</span>FCFA</h4>
+<!-- Order button -->
+        <button type="button" id="orderBtn" class="savebtn" onclick="order()">Order</button>
+      </div>
+
+    
+
+    </div>
+    <script src="../js/cart.js"></script>
+  </body>
+</html>

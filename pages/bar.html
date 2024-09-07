@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barcode Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+
+        #barcode {
+            margin: 20px 0;
+        }
+
+        #printButton {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #printButton:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Generate and Print Barcode</h1>
+
+    <!-- Barcode will be generated here -->
+    <svg id="barcode"></svg>
+
+    <!-- Print button -->
+    <button id="printButton" onclick="printBarcode()">Print Barcode</button>
+
+    <!-- Barcode scan listener (for testing, this will trigger when barcode is scanned) -->
+    <input type="text" id="scanInput" placeholder="Scan the barcode here" style="margin-top: 20px; padding: 10px; font-size: 16px;" autofocus>
+
+    <!-- Script to generate barcode -->
+    <script src="JsBarcode.all.min.js"></script>
+    <script>
+        // Generate barcode with a specific value
+        function generateBarcode() {
+            JsBarcode("#barcode", "MYBARCODE123", {
+                format: "CODE128", // Type of barcode
+                width: 2,
+                height: 100,
+                displayValue: true // Show the text value below the barcode
+            });
+        }
+
+        // Call the function to generate the barcode on page load
+        window.onload = generateBarcode;
+
+        // Function to print the barcode
+        function printBarcode() {
+            window.print(); // Open print dialog to print the barcode
+        }
+
+        // When barcode is scanned (scanner will input the scanned value into this field)
+        document.getElementById("scanInput").addEventListener("input", function() {
+            var scannedValue = this.value;
+
+            // If the scanned value matches the barcode we generated, redirect to home page
+            if (scannedValue === "MYBARCODE123") {
+                window.location.href = "home.html"; // Replace with your actual homepage file
+            }
+        });
+    </script>
+</body>
+</html>
